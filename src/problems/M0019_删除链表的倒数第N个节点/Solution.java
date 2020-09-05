@@ -1,7 +1,7 @@
 package problems.M0019_删除链表的倒数第N个节点;
 
-import myds.LinkedList;
-import myds.ListNode;
+import my.ds.LinkedList;
+import my.ds.ListNode;
 import org.junit.Test;
 
 public class Solution {

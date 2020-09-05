@@ -1,4 +1,4 @@
-package myds;
+package my.ds;
 
 public class ListNode {
     public int val;

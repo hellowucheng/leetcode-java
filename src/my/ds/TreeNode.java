@@ -1,4 +1,4 @@
-package myds;
+package my.ds;
 
 import java.util.LinkedList;
 import java.util.Queue;

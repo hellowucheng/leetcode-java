@@ -1,7 +1,7 @@
 package problems.E0101_对称二叉树;
 
-import myds.BinaryTree;
-import myds.TreeNode;
+import my.ds.BinaryTree;
+import my.ds.TreeNode;
 import org.junit.Assert;
 import org.junit.Test;
 

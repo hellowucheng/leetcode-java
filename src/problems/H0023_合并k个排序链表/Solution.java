@@ -1,7 +1,7 @@
 package problems.H0023_合并k个排序链表;
 
-import myds.LinkedList;
-import myds.ListNode;
+import my.ds.LinkedList;
+import my.ds.ListNode;
 import org.junit.Test;
 
 import java.util.Comparator;

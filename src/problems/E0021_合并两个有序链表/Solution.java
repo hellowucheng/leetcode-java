@@ -1,7 +1,7 @@
 package problems.E0021_合并两个有序链表;
 
-import myds.LinkedList;
-import myds.ListNode;
+import my.ds.LinkedList;
+import my.ds.ListNode;
 import org.junit.Test;
 
 public class Solution {

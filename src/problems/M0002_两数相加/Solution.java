@@ -1,10 +1,8 @@
 package problems.M0002_两数相加;
 
-import myds.LinkedList;
-import myds.ListNode;
+import my.ds.LinkedList;
+import my.ds.ListNode;
 import org.junit.Test;
-
-import java.util.List;
 
 public class Solution {
 
