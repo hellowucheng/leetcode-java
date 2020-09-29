@@ -26,7 +26,7 @@ public class TreeNode {
                 buffer.append("#").append(",");
             }
             else {
-                buffer.append(val).append(",");
+                buffer.append(cur.val).append(",");
                 queue.add(cur.left);
                 queue.add(cur.right);
             }
