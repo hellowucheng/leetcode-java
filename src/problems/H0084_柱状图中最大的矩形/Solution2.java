@@ -15,7 +15,7 @@ public class Solution2 {
             return heights[i];
         }
         else {
-            Elem minRect = st.search(i, j);
+            Elem<Integer> minRect = st.search(i, j);
             return Math.max(minRect.value * (j - i + 1), Math.max(helper(i, minRect.index - 1, heights, st), helper(minRect.index + 1, j, heights, st)));
         }
     }

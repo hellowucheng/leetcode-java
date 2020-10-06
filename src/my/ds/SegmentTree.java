@@ -6,7 +6,7 @@ public class SegmentTree {
     private class SegmentTreeNode{
         public int l;
         public int r;
-        public Elem value;
+        public Elem<Integer> value;
         public SegmentTreeNode left;
         public SegmentTreeNode right;
 
@@ -24,9 +24,9 @@ public class SegmentTree {
 
     public int[] nums;
     public SegmentTreeNode root;
-    public BiFunction<Elem, Elem, Elem> func;
+    public BiFunction<Elem<Integer>, Elem<Integer>, Elem<Integer>> func;
 
-    public SegmentTree(int[] nums, BiFunction<Elem, Elem, Elem> func) {
+    public SegmentTree(int[] nums, BiFunction<Elem<Integer>, Elem<Integer>, Elem<Integer>> func) {
         if (nums == null || nums.length == 0) {
             throw new RuntimeException("构造数组不能为空!");
         }
@@ -40,7 +40,7 @@ public class SegmentTree {
             return null;
         }
         else if (l == r) {
-            return new SegmentTreeNode(l, r, new Elem(nums[l], l));
+            return new SegmentTreeNode(l, r, new Elem<Integer>(nums[l], l));
         }
         int mid = (l + r) / 2;
         SegmentTreeNode root = new SegmentTreeNode(l, r);
@@ -50,14 +50,14 @@ public class SegmentTree {
         return root;
     }
 
-    public Elem search(int i, int j) {
+    public Elem<Integer> search(int i, int j) {
         if(i < 0 || j >= this.nums.length || i > j){
             throw new RuntimeException("区间不合法");
         }
         return _search(root, i, j);
     }
 
-    private Elem _search(SegmentTreeNode root, int l, int r) {
+    private Elem<Integer> _search(SegmentTreeNode root, int l, int r) {
         if (root.l == l && root.r == r) {
             return root.value;
         }
