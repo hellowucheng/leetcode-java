@@ -22,6 +22,23 @@ public class Show {
         System.out.println("-----------------------------------");
     }
 
+    public static void showMatrix(char[][] matrix){
+        System.out.println("-----------------------------------");
+        if (matrix == null || matrix.length == 0){
+            System.out.println("null");
+            System.out.println("-----------------------------------");
+            return;
+        }
+        int rows = matrix.length, cols = matrix[0].length;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("-----------------------------------");
+    }
+
     public static void showArray(int[] nums) {
         System.out.println("-----------------------------------");
         for (int i = 0; i < nums.length; i++) {
