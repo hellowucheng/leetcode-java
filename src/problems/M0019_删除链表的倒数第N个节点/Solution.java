@@ -10,11 +10,11 @@ public class Solution {
         // 快慢指针
         // 必须保证有倒数第N个节点
         ListNode fast = head;
-        for (int i = 0; i < n - 1; i++) {
+        for (int i = 0; i < n; i++) {
             fast = fast.next;
         }
         ListNode slow = head, prev = null;
-        while (fast.next != null){
+        while (fast != null){
             prev = slow;
             fast = fast.next;
             slow = slow.next;
@@ -39,4 +39,5 @@ public class Solution {
         LinkedList list3 = new LinkedList(1,2,3,4,5,6,7);
         System.out.println(removeNthFromEnd(list3.head, 7));
     }
+
 }
