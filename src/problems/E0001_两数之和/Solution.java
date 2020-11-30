@@ -27,4 +27,4 @@ public class Solution {
         System.out.println(Arrays.toString(twoSum(nums, 11)));
         System.out.println(Arrays.toString(twoSum(nums, 20)));
     }
-}
+} 

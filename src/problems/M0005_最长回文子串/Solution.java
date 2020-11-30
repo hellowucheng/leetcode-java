@@ -29,7 +29,9 @@ public class Solution {
     }
 
     private int expand(int l, int r, String s) {
-        while (l >= 0 && r < s.length() && s.charAt(l--) == s.charAt(r++)) {
+        while (l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)) {
+            l -= 1;
+            r += 1;
         }
         return r - l - 1;
     }
@@ -39,6 +41,6 @@ public class Solution {
         Assert.assertEquals("", longestPalindrome(""));
         Assert.assertEquals("a", longestPalindrome("a"));
         Assert.assertEquals("aba", longestPalindrome("aba"));
-        Assert.assertNotEquals("cdc", longestPalindrome("acdcb"));
+        Assert.assertEquals("cdc", longestPalindrome("acdcb"));
     }
 }
